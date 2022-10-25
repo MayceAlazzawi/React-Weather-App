@@ -1,7 +1,9 @@
 import './App.css';
 import React, { useEffect, useState } from "react";
-import Weather from "./components/Weather"
-
+import Weather from "./components/Weather";
+import { Splide, SplideTrack, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/splide/css/sea-green';
+import { findByLabelText } from '@testing-library/react';
 function App() {
   const [lat, setLat] = useState([]);
   const [long, setLong] = useState([]);
@@ -30,12 +32,36 @@ function App() {
   return (
     <div className="App">
       {(typeof data.main !== "undefined") ?
-        (< Weather weatherData={data} />
+        (
+          <Splide aria-labelledby="My Favorite Images" options={{
+            // rewind: true,
+            width: 1400,
+            gap: '1rem',
+            display: "flex",
+            // flex-direction: "row"
+          }}>
+            <SplideSlide >
+              {/* <SplideTrack> */}
+              <Weather weatherData={data} />
+              <Weather weatherData={data} />
+              <Weather weatherData={data} />
+              {/* </SplideTrack> */}
+            </SplideSlide>
+
+            <SplideSlide >
+              {/* <SplideTrack> */}
+              <Weather weatherData={data} />
+              <Weather weatherData={data} />
+              {/* </SplideTrack> */}
+            </SplideSlide>
+
+
+          </Splide>
         ) : (
           <div></div>
         )
       }
-    </div>
+    </div >
   );
 }
 

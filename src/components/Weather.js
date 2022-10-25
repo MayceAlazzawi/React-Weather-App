@@ -9,31 +9,28 @@ const refresh = () => {
 }
 
 const Weather = (weatherData) => {
-  console.log(weatherData.weatherData.name)
+  console.log(weatherData.weatherData)
 
   return (
-    <div className="main">
-
+    <div className="Card ">
       <div className="top">
-        <p className="header">{weatherData.weatherData.name}</p>
+        <p className="header padding">{weatherData.weatherData.name}</p>
         <Button className="button" inverted color='blue' circular icon='refresh' onClick={refresh} />
       </div>
-
-      <div className="flex">
-        <p className="day">{moment().format('dddd')}, <span>{moment().format('LL')}</span></p>
-        <p className="description">{weatherData.weatherData.weather[0].main}</p>
+      <div className="flex color padding">
+        <p className="day color">{moment().format('dddd')}, <span>{moment().format('LL')}</span></p>
+        <p className="description  color">{weatherData.weatherData.weather[0].main}</p>
       </div>
 
-      <div className="flex">
-        <p className="temp">Temprature: {weatherData.weatherData.main.temp} &deg;C</p>
-        <p className="temp">Humidity: {weatherData.weatherData.main.humidity} %</p>
+      <div className="flex color padding">
+        <p className="temp color">Temprature: {weatherData.weatherData.main.temp} &deg;C</p>
+        <p className="temp color">Humidity: {weatherData.weatherData.main.humidity} %</p>
       </div>
 
-      <div className="flex">
-        <p className="sunrise-sunset">Sunrise: {new Date(weatherData.weatherData.sys.sunrise * 1000).toLocaleTimeString('en-IN')}</p>
-        <p className="sunrise-sunset">Sunset: {new Date(weatherData.weatherData.sys.sunset * 1000).toLocaleTimeString('en-IN')}</p>
+      <div className="flex color padding">
+        <p className="sunrise-sunset color">Sunrise: {new Date(weatherData.weatherData.sys.sunrise * 1000).toLocaleTimeString('en-IN')}</p>
+        <p className="sunrise-sunset color">Sunset: {new Date(weatherData.weatherData.sys.sunset * 1000).toLocaleTimeString('en-IN')}</p>
       </div>
-
     </div>
 
   )

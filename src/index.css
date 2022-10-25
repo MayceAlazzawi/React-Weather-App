@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Recursive&display=swap");
-
+@import "react-alice-carousel/lib/alice-carousel.css";
 .main {
   width: 700px;
   border-radius: 20px;
@@ -69,4 +69,16 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  margin: 3rem;
+  /* justify-content: space-around; */
+}
+
+.carousel-container {
+  width: 100%;
+  background-color: red;
 }
