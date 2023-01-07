@@ -8,6 +8,8 @@
 }
 .App {
   margin-top: 0px;
+  display: flex;
+  flex-direction: column;
 }
 
 #splide01-slide01,
@@ -26,6 +28,7 @@
   background: white;
   color: black;
   border-radius: 20px;
+  margin: 0.5rem;
 }
 
 .top {

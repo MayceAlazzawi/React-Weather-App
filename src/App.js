@@ -32,11 +32,14 @@ function App() {
   console.log(data)
   return (
     <div className="App">
+      <div className=' title'><h1>Hourly Weather App</h1></div>
       {(typeof data.list !== "undefined") ?
-        (<Splide aria-labelledby="My Favorite Images" options={{ rewind: true, width: 1400, gap: "1rem", display: "flex" }}>
+        (<Splide aria-labelledby="My Favorite Images" options={{ rewind: true, width: "1600", gap: "1", display: "flex" }}>
           <SplideSlide> <Weather weatherData={data.list[0]} city={data.city.name} /></SplideSlide>
-          <SplideSlide>Istanbul's Weather:2</SplideSlide>
-
+          <SplideSlide> <Weather weatherData={data.list[1]} city={data.city.name} /></SplideSlide>
+          <SplideSlide> <Weather weatherData={data.list[2]} city={data.city.name} /></SplideSlide>
+          <SplideSlide> <Weather weatherData={data.list[3]} city={data.city.name} /></SplideSlide>
+          <SplideSlide> <Weather weatherData={data.list[4]} city={data.city.name} /></SplideSlide>
         </Splide>
           // <Splide aria-labelledby="My Favorite Images" options={{
           //   rewind: true,
