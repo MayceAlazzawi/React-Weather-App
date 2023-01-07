@@ -82,3 +82,12 @@
   width: 100%;
   background-color: red;
 }
+
+.icon {
+  /* background-color: blue; */
+  display: flex;
+  align-items: center;
+  align-text: center;
+  justify-content: center;
+  flex-direction: row;
+}
